@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — Salt & Pepper Productions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <ul class="nav-links nav-links--left">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="gallery.html" class="active">Gallery</a></li>
+  </ul>
+  <a href="index.html" class="nav-logo-img">
+    <img src="assets/logo.png" alt="Salt &amp; Pepper Productions" onerror="this.parentElement.classList.add('nav-logo-fallback'); this.style.display='none';">
+    <span class="nav-logo-text">S&amp;P<em>Productions</em></span>
+  </a>
+  <ul class="nav-links nav-links--right">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" onclick="toggleMenu()">&#9776;</button>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <p class="section-label">Our Work</p>
+  <h1>Project <em>Gallery</em></h1>
+  <p class="page-header-sub">A curated showcase of documentaries, short films, music &amp; lyric videos.</p>
+</header>
+
+<!-- FILTER TABS -->
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="filterVideos('all', this)">All</button>
+  <button class="filter-btn" onclick="filterVideos('documentary', this)">Documentary</button>
+  <button class="filter-btn" onclick="filterVideos('musicvideo', this)">Music Video</button>
+  <button class="filter-btn" onclick="filterVideos('promo', this)">Adverts / Promo</button>
+  <button class="filter-btn" onclick="filterVideos('shortfilm', this)">Short Film</button>
+</div>
+
+<!-- VIDEO GRID -->
+<section class="gallery-grid" id="gallery-grid">
+
+  <div class="video-card" data-category="musicvideo">
+    <div class="video-embed">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/L2N7ANQQc_E?si=aSwqm9EO8okC7VlM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="video-meta">
+      <span class="feat-tag">Music Video</span>
+      <h3>Lethologica (Lyric Video)</h3>
+      <p>Edited by T.G Visuals</p>
+    </div>
+  </div>
+
+  <div class="video-card" data-category="musicvideo">
+    <div class="video-embed">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/hnR95Bcwbyw?si=CtmjpszybO-W1UsM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="video-meta">
+      <span class="feat-tag">Music Video</span>
+      <h3>Lost Souls ft Truth Music</h3>
+      <p>Edited by ThomasG (T.G Visuals)</p>
+    </div>
+  </div>
+
+  <div class="video-card" data-category="musicvideo">
+    <div class="video-embed">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/8VO9LsrX7sM?si=glJu1tTOuMeHMEU9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="video-meta">
+      <span class="feat-tag">Music Video</span>
+      <h3>Wordplay Revealer ft YoungKing Edited By ThomasG</h3>
+      <p>T.G Visuals</p>
+    </div>
+  </div>
+
+  <div class="video-card" data-category="musicvideo">
+    <div class="video-embed">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/aUexsHwU-lA?si=L07F420nZqs1qk4_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="video-meta">
+      <span class="feat-tag">Music Video</span>
+      <h3>SideTracked Music Video</h3>
+      <p>Edited by T.G Visuals</p>
+    </div>
+  </div>
+
+  <div class="video-card" data-category="musicvideo">
+    <div class="video-embed">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/vfdaizGLg1g?si=suz4fLsgndt3QglO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="video-meta">
+      <span class="feat-tag">Music Video</span>
+      <h3>Gale (Feature Fim)</h3>
+      <p>Gale - Yellow Brick Road (Official Trailer)</p>
+    </div>
+  </div>
+
+  <div class="video-card" data-category="musicvideo">
+    <div class="video-embed">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/5oevA37QFbI?si=iLC7EhpHpsHIO5sV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="video-meta">
+      <span class="feat-tag">Music Video</span>
+      <h3>Catharsis (Short Film)</h3>
+      <p>Our recent short film</p>
+    </div>
+  </div>
+
+  <div class="video-card" data-category="shortfilm">
+    <div class="video-embed">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/3UBXSyTeO94?si=K0HDWY4OfPuT_OBr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="video-meta">
+      <span class="feat-tag">Music Video</span>
+      <h3>Mendzz - Highlight</h3>
+      <p>Music Video</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- CTA -->
+<section class="gallery-cta">
+  <h2>Have a story to tell?</h2>
+  <p>We'd love to hear about your project.</p>
+  <a href="contact.html" class="btn-primary">Get in Touch</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo-text">S&amp;P<span>Productions</span></span>
+      <p>Videography &amp; Documentary filmmaking with soul.</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-contact">
+      <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="80e8e5ececefc0f3e1ecf4f0e5f0f0e5f2f0f2efe4f5e3f4e9efeef3aee3efed">[email&#160;protected]</a></p>
+      <p>+44 7823 964727 (Manasseh) <br>+44 7591 336905 (Thomas)</p>
+    </div>
+  </div>
+  <p class="footer-copy">&copy; 2026 Salt &amp; Pepper Productions. Designed by <strong>AF</strong> Graphix Studio.</p>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
